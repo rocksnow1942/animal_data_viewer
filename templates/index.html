@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<h1 align='center'>Animal Data Viewer</h1>
+
+<div class='row'>
+    <div class="col-sm-8 col-xs-offset-2">
+
+<h4>Basic Settings:</h5>
+<p>Animal Data Path is the folder of animal data.</p>
+<p>JSON File Path is the folder you want to put your personal index file.</p>
+<p>Default JSON file path is under script folder/experiment_index.</p>
+
+<form action="{{url_for('index')}}" method="get" class="form" role="form">
+
+<div style="padding-top: 30px;">
+<div class="input-group" >
+    <span class="input-group-addon">Animal Data Path</span>
+    <input type="text" class="form-control" name='datapath' value="{{datapath}}" placeholder="Enter the full path of animal data folder.">
+</div></div>
+
+<div style="padding-top: 30px;">
+<div class="input-group" >
+    <span class="input-group-addon">JSON File Path</span>
+    <input type="text" class="form-control" name='jsonpath' value="{{jsonpath}}"
+        placeholder="Enter the full path of folder you want to save your index file.">
+</div>
+</div>
+
+<div class="input-group" style="margin-left:60%; padding-top:30px;">
+<button class="btn btn-primary" id="submit" name="submit" type="submit">Confirm Path and Enter Viewer</button>
+</div>
+</form>
+</div>
+</div>
+{% endblock %}

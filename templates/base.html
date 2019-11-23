@@ -1,0 +1,81 @@
+{% extends "bootstrap_base.html" %}
+
+{%- block styles %}
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+{{super()}}
+<link href="../static/styles.css" rel="stylesheet" type="text/css">
+{%- endblock styles %}
+
+
+{% block title %}
+    {% if title %}
+     {{ title }}
+    {% else %}
+      Welcome to Aptitude
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="min-height: 100px;" id='main_container'>
+  <div class="flash_message_container">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  
+  {% include "flash_messages.html" %}
+  {% endwith %}
+</div>
+  
+
+    {% block app_content %}{% endblock %}
+</div>
+<!-- footer -->
+<div class='container' style="padding: 20px;">
+<div class='row' >
+  <h5 align='center'>Copyright &copy;<a href="http://www.aptitudemedical.com/"> Aptitude Medical Systems, Inc. 2019</a></h5>
+</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+  // display and close toast messages automatically if toast is not yellow.
+  function display_flash_message(result, time) {
+    time = time ? time : 500;
+    $(".flash_message_container").html(result);
+    let toast = $(".my_toast_container").slideDown('slow', 'swing');
+    if (!result.includes('toast--yellow')) {
+      toast.delay(time).slideUp(500, 'swing')
+    }
+  };
+
+  // function to close toast message. not in use.
+  function close_toast_message(time) {
+    time = time ? time : 500;
+    $(".my_toast_container").slideDown('slow', 'swing').delay(time).slideUp(500, 'swing')
+  }
+
+  // resize main container height to make bottom banner not too close to top.
+    $(document).ready(function () {
+      $(window).resize(function () {
+        var bodyheight = $(this).height();
+        $("#main_container").css('min-height', bodyheight - 90);
+      }).resize();
+    });
+  
+
+
+  // display toast message whenever a page reloads.
+  $(document).ready(function () {
+    let category = [];
+    $(".my_toast_container").each(function () { category.push($(this).attr('name')) });
+    if (category.every((e) => { return e == 'success' | e == 'info' })) {
+      $(".my_toast_container").slideDown('slow', 'swing').delay(1000).slideUp(500, 'swing')
+    } else (
+      $(".my_toast_container").slideDown('slow', 'swing')
+    )
+  }); 
+
+
+</script>
+
+{% endblock %}
