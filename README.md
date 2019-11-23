@@ -13,15 +13,19 @@ then run
 
 # Animal Data Path folder structure:  
 
+    .Animal Data folder
+    ├── ...
+    ├── Experiment Name folder     # Folder containing all data for an experiment set.
+    │   ├── D5                     # Day number of the measurement
+    │       ├── integration         # End-to-end, integration tests (alternatively `e2e`)
+    │       └── unit                # Unit tests 
+    │
+    │
+    │
+    ├── Another Experiment 
+    └── ...
+    
 
-.
-├── build                   # Compiled files (alternatively `dist`)  
-├── docs                    # Documentation files (alternatively `doc`)  
-├── src                     # Source files (alternatively `lib` or `app`)  
-├── test                    # Automated tests (alternatively `spec` or `tests`)  
-├── tools                   # Tools and utilities  
-├── LICENSE  
-└── README.md  
 
 
 `
