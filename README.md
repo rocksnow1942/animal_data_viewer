@@ -17,18 +17,18 @@ then run
 Experiment Name Folder
 
 
-`*
-|-D5 / D7 etc.
-  |-FP
-    |- Monkey Number
-       |- XXXXXXX-L.jpg
-       |- XXXXXXX-R.jpg       
-  |-OCT
+`
+|-D5 / D7 etc.  
+  |-FP   
     |- Monkey Number    
-       |-OD 
-         |- XXXXXX.jpg
-       |-OS
-         |- XXXXXX.jpg*`
+       |- XXXXXXX-L.jpg  
+       |- XXXXXXX-R.jpg        
+  |-OCT  
+    |- Monkey Number      
+       |-OD   
+         |- XXXXXX.jpg  
+       |-OS  
+         |- XXXXXX.jpg  `
 
 JSON file path is for saving indexing file of data. 
 App will scan for any folder changes, reindex experiments folder changes and save index info of each experiment to a JSON file.
