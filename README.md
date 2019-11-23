@@ -18,11 +18,13 @@ Experiment Name Folder
 
 `
 |-D5 / D7 etc.
+
   |-FP
     |- Monkey Number
        |- XXXXXXX-L.jpg
        |- XXXXXXX-R.jpg       
   |-OCT
+  
     |- Monkey Number    
        |-OD 
          |- XXXXXX.jpg
