@@ -1,6 +1,6 @@
 # Animal Data Viewer  
 
-[![Python Versions][pyversion-button]][md-pypi]  
+![Python Versions][pyversion-button]
 
 [pyversion-button]: https://img.shields.io/pypi/pyversions/Markdown.svg  
 
