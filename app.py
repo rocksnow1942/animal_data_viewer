@@ -11,8 +11,11 @@ from flask import render_template, flash, request, jsonify, send_from_directory,
 class CONFIG(dict):
     _save_path = os.path.join(os.path.dirname(__file__), 'settings.json')
     def __init__(self,):
-        with open(self._save_path, 'rt') as f:
-            config = json.load(f)
+        if os.path.isfile(self._save_path):
+            with open(self._save_path, 'rt') as f:
+                config = json.load(f)
+        else:
+            config = {}
         super().__init__(**config)
 
     def save(self):
