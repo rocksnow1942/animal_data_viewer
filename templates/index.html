@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 
 {% block app_content %}
+<style>
+    .input-group {
+        margin:5px;
+        width:100%;
+    }
+    span.input-group-addon {
+        width: 100px;
+        padding: 0px;
+    }
+</style>
 
 <h1 align='center'>Animal Data Viewer</h1>
 
@@ -8,28 +18,28 @@
     <div class="col-sm-8 col-xs-offset-2">
 
 <h4>Basic Settings:</h5>
-<p>Animal Data Path is the folder of animal data.</p>
-<p>JSON File Path is the folder you want to put your personal index file.</p>
+<p>Data Path is the folder of animal data.</p>
+<p>JSON Path is the folder you want to put your personal index file.</p>
 <p>Default JSON file path is under script folder/experiment_index.</p>
 
 <form action="{{url_for('index')}}" method="get" class="form" role="form">
 
 <div style="padding-top: 30px;">
 <div class="input-group" >
-    <span class="input-group-addon">Animal Data Path</span>
+    <span class="input-group-addon">Data Path</span>
     <input type="text" class="form-control" name='datapath' value="{{datapath}}" placeholder="Enter the full path of animal data folder.">
 </div></div>
 
 <div style="padding-top: 30px;">
 <div class="input-group" >
-    <span class="input-group-addon">JSON File Path</span>
+    <span class="input-group-addon">JSON Path</span>
     <input type="text" class="form-control" name='jsonpath' value="{{jsonpath}}"
         placeholder="Enter the full path of folder you want to save your index file.">
 </div>
 </div>
 
-<div class="input-group" style="margin:auto; padding-top:100px;">
-<button class="btn btn-primary" style="font-size: 35px;font-weight: bold;font-family: Helvetica; height:80px;" id="submit" name="submit" type="submit">Enter Viewer</button>
+<div style="margin:auto; padding-top:100px; position:relative;display: table;">
+<button class="btn btn-primary" style="font-size: 35px;font-weight: bold;font-family: Helvetica; width:300px; height:80px;" id="submit" name="submit" type="submit">Enter Viewer</button>
 </div>
 </form>
 </div>

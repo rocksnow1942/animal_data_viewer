@@ -25,3 +25,8 @@ Experiment Name Folder
        |-OS
          |- XXXXXX.jpg
 
+JSON file path is for saving indexing file of data. 
+App will scan for any folder changes, reindex experiments folder changes and save index info of each experiment to a JSON file.
+
+The settings of both folders are in the settings.json file. 
+
