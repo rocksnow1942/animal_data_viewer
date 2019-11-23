@@ -1,13 +1,14 @@
 # Animal Data Viewer  
 
-[![build status][1]][3]
-![2]
-![version]
+[![python version][pvlogo]][pythonwebsite]
+[![2][flg]][flask]
+[![adv][version]][]
 
 
-[1]: https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20-blue
-[3]: https://www.python.org/downloads/release/python-375
-[2]: https://img.shields.io/badge/flask-1.1.1-green
+[pvlogo]: https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20-blue
+[pythonwebsite]: https://www.python.org/downloads/release/python-375
+[flg]: https://img.shields.io/badge/flask-1.1.1-green
+[flask]: https://palletsprojects.com/p/flask/
 [version]:https://img.shields.io/badge/version-0.1.0-brightgreen
 
 ### How to use:
