@@ -1,10 +1,12 @@
 # Animal Data Viewer  
 
-![1]
+[![build status][1]][3]
 ![2]
 ![version]
 
-[1]:https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20-blue
+
+[1]: https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20-blue
+[3]: https://www.python.org/downloads/release/python-375
 [2]: https://img.shields.io/badge/flask-1.1.1-green
 [version]:https://img.shields.io/badge/version-0.1.0-brightgreen
 
