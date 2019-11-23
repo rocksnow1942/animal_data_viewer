@@ -1,4 +1,4 @@
-<p style="text-wrap:pre-wrap;font-family:mono;"> 
+<p style="white-space:pre-wrap;font-family:mono;"> 
 Animal Data Viewer
 
 How to use:
