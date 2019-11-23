@@ -5,21 +5,29 @@
 * python version > 3.7
 * On Mac terminal,
 * Install flask package:
-$ pip install Flask==1.1.1 # tested on this version 
+`$ pip install Flask==1.1.1` # tested on this version 
 or 
-$ pip install Flask
+`$ pip install Flask`
 then run 
-$ python your/path/to/app.py 
+`$ python your/path/to/app.py `
 
 # Animal Data Path folder structure:
 Experiment Name Folder
+
 |-D5 / D7 etc.
+
   |-FP
+  
     |- Monkey Number
+    
        |- XXXXXXX-L.jpg
+       
        |- XXXXXXX-R.jpg
+       
   |-OCT
+  
     |- Monkey Number
+    
        |-OD 
          |- XXXXXX.jpg
        |-OS
