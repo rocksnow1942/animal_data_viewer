@@ -2,10 +2,7 @@ from flask import Flask
 import os, json, pathlib
 from flask import render_template, flash, request, jsonify, send_from_directory,redirect,url_for
 
-# config = {
-# 'ANIMAL_DATA_PATH': "/Users/hui/Aptitude_Cloud/Project Management/AnimalResultServer",
-# 'JSON_FILE_PATH' : "/Users/hui/desktop/hui-mk-data"
-# }
+# ANIMAL_DATA_PATH: /Users/hui/Aptitude_Cloud/Project Management/AnimalResultServer 
 
 
 class CONFIG(dict):
