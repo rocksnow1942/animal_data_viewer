@@ -2,6 +2,7 @@
 __pycache__
 # C extensions
 *.so
+*.json
 .env
 .flaskenv
 # Packages
