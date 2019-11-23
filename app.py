@@ -274,7 +274,6 @@ class Experiment(object):
 config=CONFIG()
 
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY']='a smart secret key,you cannot guess.'
 
@@ -292,14 +291,18 @@ def index():
         invalid = []
         if not os.path.isdir(datapath): invalid.append(datapath)
         if not os.path.isdir(jsonpath): invalid.append(jsonpath)
-        if not invalid:
+        if invalid:
+            mmm = " and ".join([f"<'{i}'>" for i in invalid])
+            flash(f'File path {mmm} not valid.', 'warning')
+
+        elif datapath==jsonpath:
+            flash(f'Change JSON File Path to your personal folder. <{datapath}> is reserved for server usage.','warning')
+        else:
             config['ANIMAL_DATA_PATH'] = datapath
             config['JSON_FILE_PATH'] =jsonpath
             config.save()
             return redirect(url_for('animal_data'))
-        else:
-            mmm = " and ".join([f"<'{i}'>" for i in invalid])
-            flash(f'File path {mmm} not valid.','warning')
+
     return render_template('index.html',datapath=datapath,jsonpath=jsonpath)
 
 @app.route('/animal_data', methods=['GET', 'POST'])
@@ -380,4 +383,6 @@ def get_animal_data_figure(filename):
 
 
 if __name__ == "__main__":
+    import webbrowser
+    webbrowser.open_new("http://127.0.0.1:5000")
     app.run()
