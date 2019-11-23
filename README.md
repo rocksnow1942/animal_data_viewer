@@ -1,3 +1,4 @@
+<p style="text-wrap:pre-wrap;font-family:mono;"> 
 Animal Data Viewer
 
 How to use:
@@ -29,4 +30,4 @@ JSON file path is for saving indexing file of data.
 App will scan for any folder changes, reindex experiments folder changes and save index info of each experiment to a JSON file.
 
 The settings of both folders are in the settings.json file. 
-
+</p>
