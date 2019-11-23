@@ -1,8 +1,12 @@
 # Animal Data Viewer  
 
-![Python Versions][pyversion-button]
+![1]
+![2]
+![version]
 
-[pyversion-button]: https://img.shields.io/pypi/pyversions/Markdown.svg  
+[1]:https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20-blue
+[2]: https://img.shields.io/badge/flask-1.1.1-green
+[version]:https://img.shields.io/badge/version-0.1.0-brightgreen
 
 ### How to use:
 * Download repo and extract to a folder. 
